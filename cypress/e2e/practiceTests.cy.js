@@ -1,4 +1,4 @@
-import selectors from '/Users/Judy/Desktop/repos/practiceTests/cypress/support/checklistSelectors.js'
+import selectors from '../../cypress/support/checklistSelectors.js'
 
 beforeEach(() => {
   cy.login(Cypress.env('email'), Cypress.env('password')) 

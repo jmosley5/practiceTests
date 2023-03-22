@@ -7,8 +7,8 @@
 // commands please read more here:
 // https://on.cypress.io/custom-commands
 // ***********************************************
-import selectors from '/Users/Judy/Desktop/repos/practiceTests/cypress/support/loginSelectors.js'
-import { project } from '/Users/Judy/Desktop/repos/practiceTests/cypress/support/projectSelectors.js'
+import selectors from '../../cypress/support/loginSelectors.js'
+import { project } from '../../cypress/support/projectSelectors.js'
 
 // -- This is a parent command --
 Cypress.Commands.add('login', (email, password) => {
