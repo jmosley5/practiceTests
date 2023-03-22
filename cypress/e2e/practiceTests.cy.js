@@ -20,8 +20,10 @@ describe('Checklist Workflow', () => {
   it('Add a task to the Checklist', () => {
     cy.get('[data-testid="project__checklists__checklist-card"] > h3').contains('Become a Ghostbuster').click()
     cy.get(selectors.tasks.createTask).first().click()
+    // Unchecking the "Photos Required" checkbox gives me the ability to delete this task without a photo being present
     cy.get('[for="photosRequired"]').click({force: true})
     cy.get('[placeholder="Untitled Task"]').type('Hunt for Ghosts')
+    // Toggling the "Hide Completed" toggle gives me the ability to click away from the task and to test if completed tasks are hidden in the following test
     cy.get(selectors.checklist.hideCompletedToggle).click({force: true})
     cy.get('[placeholder="Untitled Task"]').contains('Hunt for Ghosts').should('be.visible')
   })
