@@ -56,17 +56,3 @@ describe('Checklist Workflow', () => {
     cy.url().should('include', '/todos')
   })
 })
-
-
-/* TODO
-1. Create an Premium package with CompanyCam
-2. Pick a page to write automated tests against
-
-
-Tests
-1. Login
-2. Select a project
-3. Create an item on  checklist
-4. Complete a checklist item
-5. Delete a checklist item
-*/
